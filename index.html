@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>Nhap vao ban kinh duong tron: <input type="text" id="r" /></div>
+    <button onclick="show()" id="btn_show">Ket qua</button>
+    <div id="show">
+      <!-- <p>Duong kinh =</p>
+      <p>Chu vi =</p>
+      
+      <p>Dien tich = </p> -->
+    </div>
+    <script>
+      function show() {
+        const PI = 3.14
+        let R = parseFloat(document.getElementById("r").value)
+        let d = 2 * R
+        let P = 2 * R * PI
+        let A = R * R * PI
+
+        let string = `
+        <p>Duong kinh:</p> ${d}
+        <br>
+        <p>Chu vi:</p> ${P}
+        <br>
+        <p>Dien tich:</p> ${A}
+        `
+        document.getElementById("show").innerHTML = string
+      }
+    </script>
+  </body>
+</html>
